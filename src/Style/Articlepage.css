@@ -1,0 +1,41 @@
+.Articles{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5%;
+    justify-content: space-evenly;
+    padding-bottom: 5%;
+}
+
+.button {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    width: 8rem; 
+    height: 2.5rem; 
+    border-radius: .5rem;
+    background-color:#3f51b5;
+    color: white;
+  }
+  .button:hover {
+    background-color:#556df7;
+
+  }
+
+.section{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #5a73ffd3;
+  color: thistle;
+  justify-content: center;
+  padding: 5px;
+}
+.section div:focus {     
+  background-color:#202b66d3;
+  border: 1px solid #202b66d3;
+  border-radius: 5%;
+}
