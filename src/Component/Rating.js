@@ -9,8 +9,7 @@ const Rating = () => {
   return (
       <div className="row">
         <div className="col text-center">
-          <h2>Rate me</h2>
-          <p>Rating component</p>
+          <h3>Kindly Rating us</h3>
           <Rate rating={rating} onRating={(rate) => setRating(rate)} />
           <p>Rating - {rating}</p>
         </div>

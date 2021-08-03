@@ -1,8 +1,10 @@
 import React from 'react';
 import Rating from './Rating';
 import "../Style/About.css";
+import gmaps from '../Media/gmap.png';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
+import Review from './Review';
 export default function About(){
     let abt={
         abt_txt:"We are company BluePad we aim on ----- aur company is ---------",
@@ -18,12 +20,13 @@ export default function About(){
             <p>{abt.contact}</p>
             <div className="Abtheader">
                 <a href={abt.gmap_address}> 
-                    <img src="../Media/gmap.png" alt="pppppp"></img> 
+                    <img src={gmaps} alt="pppppp"/>
                 </a>
             </div>
             <div className="Rating">
                 <Rating/>
             </div>
+            <Review/>
         </div>
       );
 }

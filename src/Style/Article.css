@@ -13,3 +13,17 @@
     justify-content: space-evenly;
     padding-bottom: 5%;
 }
+@media(max-width:500px){
+    .ar-div-2{
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        justify-content: space-around;
+    }
+    .ar-div-1 {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;   
+        justify-content: space-around; 
+    }
+}
