@@ -3,7 +3,7 @@ import Content from './Content'
 import "../Style/Articlepage.css"
 import Section from './Section'
 function Articlepage() {
-    let sec=["Horror","Comdedy","Romance","Thriller"]
+    let sec=["Horror","Comedy","Romance","Thriller"]
     const [usebox,setbox]=useState([{name:"Rahul",content:"Article content"},{name:"Rahul",content:"Article content"}])
     function morearticle(){
         let obj=[...usebox];

@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player'
 
 export default function Homepage(){
     const [pl, setPl] = useState(false);
-    const myvid="https://www.youtube.com/watch?v=eHyl9KG9RWA"
+    const myvid="https://www.youtube.com/watch?v=m9kD3KH7R-o"
     function handleScroll() {
         const currScrollPos = window.scrollY;
        // const { lastScrollPos, showNavLogo } = navState;

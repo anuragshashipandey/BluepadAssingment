@@ -1,18 +1,21 @@
 import React, { useMemo, useState } from "react";
 import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const Rate = ({ count, rating, color, onRating }) => {
+  const a={
+    filled: "filled",
+    unfilled: "unfilled",
+  }
   const [hoverRating, setHoverRating] = useState(0);
 
   const getColor = (index) => {
     if (hoverRating >= index) {
-      return color.filled;
+      return a.filled;
     } else if (!hoverRating && rating >= index) {
-      return color.filled;
+      return a.filled;
     }
-
-    return color.unfilled;
+    return a.unfilled;
   };
 
   const starRating = useMemo(() => {
@@ -20,12 +23,10 @@ const Rate = ({ count, rating, color, onRating }) => {
       .fill(0)
       .map((_, i) => i + 1)
       .map((idx) => (
-        <FontAwesomeIcon
-          key={idx}
-          className="cursor-pointer"
-          icon="star"
+        <img src={require(`../Media/${getColor(idx)}.png`).default}
+          id={`star${idx}`}
+          alt="star"
           onClick={() => onRating(idx)}
-          style={{ color: getColor(idx) }}
           onMouseEnter={() => setHoverRating(idx)}
           onMouseLeave={() => setHoverRating(0)}
         />
@@ -39,19 +40,11 @@ Rate.propTypes = {
   count: PropTypes.number,
   rating: PropTypes.number,
   onChange: PropTypes.func,
-  color: {
-    filled: PropTypes.string,
-    unfilled: PropTypes.string,
-  },
 };
 
 Rate.defaultProps = {
   count: 5,
   rating: 0,
-  color: {
-    filled: "#f5eb3b",
-    unfilled: "#DCDCDC",
-  },
 };
 
 export default Rate;

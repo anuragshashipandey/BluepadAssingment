@@ -42,10 +42,10 @@ function Slider() {
         <video className = "slide landing-logo" autoPlay loop muted>
                 <source src={myvid} type="video/mp4"/>
         </video>
-        <img align="middle" className = "slide landing-logo" src={require('../Media/image1.jpg').default} alt=""/>   
-        <img align="middle" className = "slide landing-logo" src={require('../Media/image2.png').default} alt=""/>   
-        <img align="middle" className = "slide landing-logo" src={require('../Media/image3.jpeg').default} alt=""/>   
-        <img align="middle" className = "slide landing-logo" src={require('../Media/image4.jpeg').default} alt=""/>
+        <img align="middle" className = "slide landing-logo" src={require('../Media/1.jpg').default} alt=""/>   
+        <img align="middle" className = "slide landing-logo" src={require('../Media/2.jpg').default} alt=""/>   
+        <img align="middle" className = "slide landing-logo" src={require('../Media/3.jpeg').default} alt=""/>   
+        <img align="middle" className = "slide landing-logo" src={require('../Media/4.jpg').default} alt=""/>
         <video className = "slide landing-logo" autoPlay loop muted>
                 <source src={myvid} type="video/mp4"/>
         </video>

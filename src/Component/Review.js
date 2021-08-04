@@ -8,8 +8,6 @@ function Review(props) {
     const [username, setusername] = useState('');
     const [useremail, setuseremail] = useState('');
     return (
-        <div>
-            
             <div className='Suggestionbox'>
                 <h4>We will appreciate your valuable feadback</h4>
                 <form className="formbox" onSubmit={e=>{
@@ -19,18 +17,13 @@ function Review(props) {
                 }}
                 noValidate autoComplete="off">
                     <TextField id="outlined-basic" variant="outlined" label="Enter Usename" onChange={e=>(setusername(e.target.value))}/>
+                    <div className="space"/>
                     <TextField id="outlined-basic" variant="outlined" label="Enter Email" onChange={e=>(setuseremail(e.target.value))}/>
+                    <div className="space"/>
                     <TextField id="outlined-basic" variant="outlined" label="Write Suggestions" minRows={3} onChange={e=>(setsugg(e.target.value))}/>
                 </form>
             </div>
-            <div className="Reviews">
-                {userdetails!==[]?userdetails.map(x=>(
-                    <div>
-                        <b>{x.name}</b> has given us {x.star} rating...
-                    </div>
-                )):''}
-            </div>
-        </div>
+        
     )
 }
 
