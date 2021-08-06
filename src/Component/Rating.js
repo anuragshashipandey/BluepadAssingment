@@ -8,9 +8,9 @@ const Rating = () => {
   const [rating, setRating] = useState(0);
   const [open, setopen] = useState(true);
   const [rating2, setRating2] = useState(0);
-
-  let userdetails=[{name:"Rahul Sharma",email:"rahul@gmail.com",suggestion:"Great Website", star:"5"},
-  {name:"Rahul Sharma",email:"rahul@gmail.com",suggestion:"Great Website", star:"5"}]
+  const [userdetails, setuserdetails] = useState([{name:"Rahul Sharma",email:"rahul@gmail.com",suggestion:"Great Website", star:"5"}]);
+  // let userdetails=[{name:"Rahul Sharma",email:"rahul@gmail.com",suggestion:"Great Website", star:"5"},
+  // {name:"Rahul Sharma",email:"rahul@gmail.com",suggestion:"Great Website", star:"5"}]
   return (
         <div className="Rating">
           <h3>Kindly Rate us</h3>
@@ -18,11 +18,15 @@ const Rating = () => {
           <p>Rating - {rating}</p>
           {rating==5?<h3>🎊🎊THANK YOU for the 5 stars 🎊🎊</h3>:null}
           
-          {open&&rating<5?<div className="Reviewbox"><button onClick={()=>{setopen(false)}} className="btn">Close</button><Review/></div>:null}
+          {open&&rating<5?<div className="Reviewbox">
+            <img src={require('../Media/cancel.png').default} onClick={()=>{setopen(false)}} className="btn" alt="closebtn"/>
+            <Review userdetails={userdetails} setuserdetails={setuserdetails} star={rating}/>
+            </div>:null
+          }
           <div className="Revi">
           {userdetails!==[]?userdetails.map(x=>(
               <div>
-                  <b>{x.name}</b> has given us {x.star} rating...
+                  <b>{x.name}</b> has commented {x.suggestion}
               </div>
           )):''}
       </div>

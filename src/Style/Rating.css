@@ -5,7 +5,7 @@
     align-content: center;
 }
 .Revi{
-
+    align-self: center;
     padding:20px;
     width: 50%;
     border-top: 10px;
@@ -22,10 +22,7 @@
 
     cursor: pointer;
     width: 3rem;
-    padding: 0.675rem 0;
+    padding: 0.175rem 0;
     /* padding: 12px; */
-    border-color: cornsilk;
-    border-radius: 50%;
-    background-color: #ff7171;
-    color: black;
+
 }

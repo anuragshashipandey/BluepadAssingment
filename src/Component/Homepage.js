@@ -14,13 +14,14 @@ export default function Homepage(){
     //    console.log(currScrollPos);
         if(!pl && currScrollPos>250&&currScrollPos<650){
             setPl(true)
-      //      console.log("start")
+            //console.log("start ",pl)
         }
         else if(pl && (currScrollPos<=250||currScrollPos>=650)){
             setPl(false);
-            // console.log("stop")
+            
+            // console.log("stop ",pl)
         }
-        // console.log("start",pl)
+        // console.log("start ",pl)
     }
 
     React.useEffect(() => {
@@ -32,7 +33,7 @@ export default function Homepage(){
         <div className="Homepage">
             <Slider/>
             <div className="Yvid">
-            <ReactPlayer url={myvid} playing={pl}/>
+            <ReactPlayer url={myvid} playing={pl} controls={true}/>
             <div className="Yviddis">
                     <h3>Youtube Video</h3>
                     <p>Video Details</p>
